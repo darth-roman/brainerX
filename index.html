@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainerX</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>My Library</h1>
+    <main>
+        <form>
+            <div class="field">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="field">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div class="field">
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre">
+                    <option value="science">science</option>
+                    <option value="religion">Religion</option>
+                    <option value="literature">Literature</option>
+                    <option value="pharmaceutical">Pharmaceutical</option>
+                    <option value="technology">Technology</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="price">Price</label>
+                <input type="text" name="price" id="price">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <section class="library-container" id="library">
+        </section>
+    </main>
+
+
+    <script type="module" src="js/database.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

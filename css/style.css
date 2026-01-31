@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --bg-light: hsl(0, 33%, 95%);
+    --bg-dark: hsl(0, 0%, 10%);
+
+    --txt-dark: hsl(0, 0%, 10%);
+    --txt-light: hsl(0, 33%, 95%);
+
+    --science: hsl(121, 97%, 12%);
+    --religion: hsl(216, 100%, 18%);
+    --literature: hsl(280, 97%, 14%);
+    --pharma: hsl(57, 91%, 61%);
+    --technology: hsl(0, 98%, 22%);
+
+    --primary-light: hsl(24, 100%, 50%);
+    --primary-dark: hsl(20, 100%, 60%);
+
+
+    --secondary-light: hsl(315, 88%, 23%);
+    --secondary-dark: hsl(306, 98%, 57%);
+}
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+    font-family: "Arvo", serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+
+
+    background-color: var(--bg-dark);
+    color: var(--txt-light);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        margin: 2rem 0rem;
+    }
+}
+
+/* Global Scope */
+
+
+/* Form Styling */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    .field{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: 0.6rem 0rem;
+
+        input, select{
+            padding: 0.2rem 0.4rem;
+            width: 100%;
+            border: 0;
+
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover{
+                box-shadow: 5px 5px var(--secondary-light);
+            }
+
+            &:focus{
+                box-shadow: 5px 5px var(--primary-dark);
+                outline: none;
+            }
+        }
+
+    }
+    button{
+        padding: 0.4rem 1rem;
+        background-color: var(--secondary-dark);
+        color: var(--txt-light);
+        border: 1px solid var(--secondary-dark);
+
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        &:hover{
+            box-shadow: 5px 6px hsl(from var(--secondary-dark) h s 30%);
+        }
+    }
+}
+
+/* Main Styling */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    /* Library Container Style */
+    .library-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 1rem 0rem;
+
+        width: 80%;
+        .book{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+
+            padding: 1rem;
+            margin: 1rem 0rem;
+            border-radius: 1rem;
+            
+            background-color: hsl(from var(--bg-dark) h s 15%);
+            width: 100%;
+            border-right: 10px;
+        }
+        
+        .science{
+            border-right: 3px solid hsl(from var(--science) h 51% 45%);
+            transition: all 0.4s cubic-bezier(0.62, 0.28, 0.47, 0.8);
+            &:hover{
+                border-right: 0;
+                /* border-right: 7px solid hsl(from var(--science) h 51% 45%); */
+                box-shadow: 4px 4px
+            }
+        }
+
+        .religion{
+            border-right: 3px solid hsl(from var(--religion) h 51% 45%);
+            transition: all 0.4s cubic-bezier(0.62, 0.28, 0.47, 0.8);
+            &:hover{
+                border-right: 0;
+                /* border-right: 7px solid hsl(from var(--religion) h 51% 45%); */
+                box-shadow: 4px 4px
+            }
+        }
+
+        .literature{
+            border-right: 3px solid hsl(from var(--literature) h 51% 45%);
+            transition: all 0.4s cubic-bezier(0.62, 0.28, 0.47, 0.8);
+            &:hover{
+                border-right: 0;
+                /* border-right: 7px solid hsl(from var(--literature) h 51% 45%); */
+                box-shadow: 4px 4px
+            }
+        }
+
+        .technology{
+            border-right: 3px solid hsl(from var(--technology) h 51% 45%);
+            transition: all 0.4s cubic-bezier(0.62, 0.28, 0.47, 0.8);
+            &:hover{
+                border-right: 0;
+                /* border-right: 7px solid hsl(from var(--technology) h 51% 45%); */
+                box-shadow: 4px 4px
+            }
+        }
+
+        .pharmaceutical{
+            border-right: 3px solid hsl(from var(--pharma) h 51% 45%);
+            transition: all 0.4s cubic-bezier(0.62, 0.28, 0.47, 0.8);
+            &:hover{
+                border-right: 0;
+                /* border-right: 7px solid hsl(from var(--pharma) h 51% 45%); */
+                box-shadow: 4px 4px
+            }
+        }
+
+        
+        
+    }
+    
+}
